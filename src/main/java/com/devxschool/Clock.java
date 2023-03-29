@@ -125,6 +125,6 @@ public class Clock {
 
     @Override
     public String toString() {
-        return String.format("%02d:%02d:%02d", hours, minutes, seconds);
+        return String.format("(%02d:%02d:%02d)", hours, minutes, seconds);
     }
 }

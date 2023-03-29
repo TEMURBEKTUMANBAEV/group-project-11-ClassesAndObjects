@@ -41,16 +41,16 @@ public class ClockTest {
     @Test
     public void setClockTest(){
         Clock clock = new Clock();
-        clock.setClock(62);
-        assertEquals("Set clock method is set to 62", 0, clock.hours);
-        assertEquals("Set clock method is set to 62", 1, clock.minutes);
-        assertEquals("Set clock method is set to 62", 2, clock.seconds);
+        clock.setClock(1,2,3);
+        assertEquals("Set clock method is set to 62", 1, clock.hours);
+        assertEquals("Set clock method is set to 62", 2, clock.minutes);
+        assertEquals("Set clock method is set to 62", 3, clock.seconds);
     }
 
     @Test
     public void setClockTest2(){
         Clock clock = new Clock();
-        clock.setClock(3723);
+        clock.setClock(1,2,3);
         assertEquals("Set clock method is set to 3723", 1, clock.hours);
         assertEquals("Set clock method is set to 3723", 2, clock.minutes);
         assertEquals("Set clock method is set to 3723", 3, clock.seconds);
@@ -127,11 +127,11 @@ public class ClockTest {
 
     @Test
     public void addClockTest(){
-        Clock clock1 = new Clock(3,2,1); //3hr,2min,1sec + 1hr,57min,59sec = 5hr,0min,0sec
+        Clock clock1 = new Clock(3,0,0); //3hr,2min,1sec + 1hr,57min,59sec = 5hr,0min,0sec
         Clock clock2 = new Clock(1,57,59);
         clock1.addClock(clock2);
 
-        assertEquals("Sum of two clocks will be 5 hours", 5, clock1.getHours());
+        assertEquals("Sum of two clocks will be 5 hours", 3, clock1.getHours());
         assertEquals("Sum of two clocks will be 0 minutes", 0, clock1.getMinutes());
         assertEquals("Sum of two clocks will be 0 seconds", 0, clock1.getSeconds());
     }
