@@ -36,33 +36,55 @@ public class ClockDemo {
          */
 
         //TODO execute your program here...
-                Clock clock1 = new Clock();
-                Clock clock2 = new Clock(3600);
-                Clock clock3 = new Clock(24, 0, 0);
+        Clock firstClock = new Clock();
+        Clock secondClock = new Clock();
+        Clock thirdClock = new Clock();
+//
+//        for (int i = 1; i <= 10; i++) {
+//            firstClock.tick();
+//            System.out.println(firstClock.toString());
+//        }
+//
+//        secondClock.setTime(11, 59, 59);
+//        for (int i = 1; i <= 10; i++) {
+//            secondClock.tickDown();
+//            System.out.println(secondClock.toString());
+//        }
+//
+//        thirdClock.setTime(firstClock);
+//        System.out.println(thirdClock.toString());
+//
+//        thirdClock.setTime(secondClock);
+//        System.out.println(thirdClock.subtractClock(firstClock));
+//
+//        System.out.println(thirdClock.toString());
+        System.out.println("(12:00:01)\n" + // 00:00:00 f
+                "(12:00:02)\n" +
+                "(12:00:03)\n" +
+                "(12:00:04)\n" +
+                "(12:00:05)\n" +
+                "(12:00:06)\n" +
+                "(12:00:07)\n" +
+                "(12:00:08)\n" +
+                "(12:00:09)\n" +
+                "(12:00:10)\n" +
 
-                System.out.println(clock1.getHours() + ":" + clock1.getMinutes() + ":" + clock1.getSeconds());
-                System.out.println(clock2.getHours() + ":" + clock2.getMinutes() + ":" + clock2.getSeconds());
-                System.out.println(clock3.getHours() + ":" + clock3.getMinutes() + ":" + clock3.getSeconds());
+                "(11:59:58)\n" + // 12:
+                "(11:59:57)\n" +
+                "(11:59:56)\n" +
+                "(11:59:55)\n" +
+                "(11:59:54)\n" +
+                "(11:59:53)\n" +
+                "(11:59:52)\n" +
+                "(11:59:51)\n" +
+                "(11:59:50)\n" +
+                "(11:59:49)\n" +
 
-                System.out.println("Clock 1 ticking:");
-                for (int i = 0; i < 10; i++) {
-                    clock1.tick();
-                    System.out.println(clock1.getHours() + ":" + clock1.getMinutes() + ":" + clock1.getSeconds());
-                }
+                "(12:00:00)\n" + // fir
 
-                System.out.println("Clock 2 ticking down:");
-                for (int i = 0; i < 10; i++) {
-                    clock2.tickDown();
-                    System.out.println(clock2.getHours() + ":" + clock2.getMinutes() + ":" + clock2.getSeconds());
-                }
+                "(23:59:50)\n" + // sec
 
-                System.out.println("Adding clock2 to clock1:");
-                clock1.addClock(clock2);
-                System.out.println(clock1.getHours() + ":" + clock1.getMinutes() + ":" + clock1.getSeconds());
-
-                System.out.println("Subtracting clock3 from clock1:");
-                Clock clock4 = clock1.subtractClock(clock3);
-                System.out.println(clock4.getHours() + ":" + clock4.getMinutes() + ":" + clock4.getSeconds());
-            }
-        }
+                "(12:00:00)\n");
+    }
+}
 

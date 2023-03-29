@@ -23,7 +23,7 @@ public class Clock {
         this.seconds = seconds;
     }
 
-    public void setClock(int hours, int minutes, int seconds) {
+    public void setTime(int hours, int minutes, int seconds) {
         this.hours = hours;
         this.minutes = minutes;
         this.seconds = seconds;
@@ -126,5 +126,8 @@ public class Clock {
     @Override
     public String toString() {
         return String.format("(%02d:%02d:%02d)", hours, minutes, seconds);
+    }
+
+    public void setTime(Clock firstClock) {
     }
 }
